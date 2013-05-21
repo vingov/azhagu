@@ -1,0 +1,398 @@
+@import "compass";
+@import "base";
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
+
+/* General Styles */
+
+body {
+  nowhitespace: afterproperty;
+  font: 14px/1.8 'Open Sans', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background: $bodybg;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* Wrapper */
+
+#wrapper{
+	width: 960px;
+	margin: 0 auto;
+	}
+
+/* Header */
+#header-wrapper{
+	margin-top: 10px;
+
+	#branding{
+		@include background-image(linear-gradient(#3a3a3a, #0d0d0d));
+		@include clearfix;
+		height: 85px;
+
+		#site-logo{
+			float: left;
+			padding: 9px 0 9px 20px;
+
+			img{
+				max-width: 100%;
+				display: block;
+				}
+			}
+
+		#name-and-slogan{
+			float: left;
+			margin-left: 20px;
+
+			h1{
+				font-size: 1.875em;
+				padding: 22px 0 0 0;
+				line-height: .800em;
+
+				a{
+					color: $white;
+					text-transform: uppercase;
+					text-decoration: none;
+					}
+				}
+			#site-slogan{
+				color: $white;
+				}
+			}
+		}
+
+		#main-menu{
+			nav{
+				@include background-image(linear-gradient(#fafafa, #d8d8d8));
+
+				ul{
+					@include clearfix;
+
+					li{
+						float: left;
+						padding: 0 12px 0 12px;
+
+						a{
+							text-decoration: none;
+							color: $default;
+							padding: 8px 0 8px 0;
+							display: block;
+							font-weight: 600;
+							}
+						}
+					li.active{
+						@include background-image(linear-gradient(#c2cf34, #8e9a1d));
+
+						a{
+							color: $white;
+							}
+						}
+
+					}
+				}
+			}
+	}
+
+/* Content */
+
+#content-wrapper{
+	background: $white url('../images/content-bg.png') 0 0 repeat-y;
+	margin-top: 10px;
+	padding: 20px;
+	@include clearfix;
+
+	section#content{
+		width: 610px;
+		float: left;
+		margin-right: 40px;
+
+		article.node{
+			background: url('../images/dotted-line.png') bottom left repeat-x;
+			padding-bottom: 25px;
+			margin-bottom: 25px;
+
+			header{
+				@include clearfix;
+				.date{
+					display: inline-block;
+					background: $graybg;
+					border: 1px solid $grayborder;
+					float: left;
+
+					span{
+						width: 50px;
+						display: block;
+						text-align: center;
+						}
+
+					.month{
+						background: $lemongreen;
+						color: $white;
+						text-transform: uppercase;
+						height: 20px;
+						font-size: .900em;
+						line-height: 1.5em;
+						font-weight: 600;
+						}
+
+					.day{
+						font-size: 1.5em;
+						line-height: 1.3em;
+						font-weight: 300;
+						}
+
+					.year{
+						font-size: .700em;
+						line-height: 1.2em;
+						font-weight: 300;
+						}
+					}
+				.title-meta{
+					margin-left: 15px;
+					float: left;
+					display: block;
+					width: 540px;
+
+					h2.title{
+						font-size: 1.8em;
+						font-weight: 600;
+						line-height: 1em;
+						background: url('../images/dotted-line.png') bottom left repeat-x;
+						padding-bottom: 10px;
+						a{
+							color: $default;
+							text-decoration: none;
+							}
+						}
+					.meta{
+						ul{
+							li{
+								display: inline-block;
+								padding:0 15px 0 20px;
+								color: $gray;
+
+								a{
+									text-decoration: none;
+									color: $gray;
+									font-size: .900em;
+									}
+								a:hover{
+									text-decoration: underline;
+									}
+								}
+							li.author-name{
+								background: url('../images/icons/icon-user.png') no-repeat 1px 8px;
+								}
+							li.tags{
+								background: url('../images/icons/icon-tags.png') no-repeat 1px 8px;
+								}
+							li.comments{
+								background: url('../images/icons/icon-comments.png') no-repeat 1px 8px;
+								}
+							}
+						}
+					}
+				}
+			.content{
+				margin-top: 25px;
+				@include clearfix;
+
+				img{
+					float: left;
+					padding: 5px;
+					margin: 0.5em 1em 0.5em 0;
+					border: 1px solid $imgborder;
+					}
+				p{
+					padding: 0 0 15px 0;
+					}
+
+				footer{
+					display: inline-block;
+
+					a{
+						color: $default;
+						@include background-image(linear-gradient(#e8e8e8, #d7d7d7));
+						@include border-radius(3px);
+						padding: 0 10px;
+						text-decoration: none;
+						font-weight: .900em;
+						display: block;
+						}
+					}
+
+				}
+
+			
+
+			}
+
+		article.node-page{
+			background: url('../images/dotted-line.png') bottom left repeat-x;
+			padding-bottom: 25px;
+			margin-bottom: 25px;
+
+			header{
+				.title-meta{
+					margin-left: 0px;
+					float: left;
+					display: block;
+					width: 600px;
+
+					h2.title{
+						font-size: 1.8em;
+						font-weight: 600;
+						line-height: 1em;
+						padding-bottom: 10px;
+						background: none;
+						}
+					}
+				}
+			.content{
+				margin-top: 15px;
+				}
+			}
+
+		article:last-child{
+			background: none;
+			}
+		}
+
+	aside#sidebar-first{
+		width: 270px;
+		float: left;
+
+		#block-search-form{
+			text-align: center;
+			position: relative;
+			margin-bottom: 2em;
+
+			input[type="text"]{
+				border: 1px solid $txtborder;
+				padding: 10px;
+				@include border-radius(3px);
+				width: 75%;
+				color: $gray;
+				}
+
+			input[type="submit"]{
+				background: url('../images/icons/icon-search.png') no-repeat 0 0;
+				width: 14px;
+				height: 14px;
+				border: 0;
+				text-indent: -9999px;
+				left: -30px;
+				top: 1px;
+				position: relative;
+				}
+
+			}
+		.block{
+			margin-bottom: 1.5em;
+
+			h2{
+				color: $lemongreendark;
+				font-weight: 600;
+				font-size: 1.4em;
+				background: url('../images/dotted-line.png') bottom left repeat-x;
+				padding-bottom: .2em;
+				margin-bottom: .2em;
+				}
+			.content{
+				ul{
+					li{
+						padding: 0 0 0 15px;
+						background: url('../images/block-arrow.png') 0px 9px no-repeat;
+
+						a{
+							text-decoration: none;
+							color: $default;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+
+/* Footer */
+
+#footer-wrapper{
+	margin: 10px 0 20px 0;
+	border-top: 5px solid $lightgray;
+	@include background-image(linear-gradient(#dcdcdc, #e6e7e7));
+	padding: 10px 20px 20px 20px;
+
+	.footer-region-first{
+		@include clearfix;
+		
+		h2.title{
+			font-weight: 600;
+			font-size: 1.4em;
+			background: url('../images/dotted-line-dark.png') bottom left repeat-x;
+			padding-bottom: .2em;
+			margin-bottom: .2em;
+			}
+		.footer-first{
+			width: 293px;
+			float: left;
+			padding-right: 20px;
+
+			ul{
+				@include clearfix;
+				margin-top: 10px;
+
+				li{
+					float: left;
+					width: 24px;
+					padding: 0 0 0 8px;
+
+					a{
+						display: block;
+						width: 24px;
+						height: 24px;
+						text-indent: -9999px;
+						}
+					}
+				li.first-icon{
+					background: url('../images/icons/icon-facebook.png') 0 0 no-repeat;
+					}
+				li.second-icon{
+					background: url('../images/icons/icon-twitter.png') 0 0 no-repeat;
+					}
+				li.third-icon{
+					background: url('../images/icons/icon-google.png') 0 0 no-repeat;
+					}
+				li.fourth-icon{
+					background: url('../images/icons/icon-pintrest.png') 0 0 no-repeat;
+					}
+				li.fifth-icon{
+					background: url('../images/icons/icon-rss.png') 0 0 no-repeat;
+					}
+
+				}
+			}
+		.footer-second{
+			width: 293px;
+			float: left;
+			padding-right: 20px;
+			}
+		.footer-third{
+			width: 293px;
+			float: left;
+			}
+		}
+	.footer-region-second{
+		text-align: center;
+		padding: 10px;
+		margin-top: 25px;
+		background: url('../images/copyright-bg.png') top center no-repeat;
+		font-size: .800em;
+		}
+	}

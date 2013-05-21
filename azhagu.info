@@ -1,0 +1,15 @@
+name		=	Azhagu
+description	=	Azhagu means beauty in Tamil. This is a single and two-column responsive theme with the basic features available.
+core		=	7.x
+
+; CSS Stylesheets
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/style.css
+
+; JavaScript files
+; scripts[] = js/jquery.autofill.js
+; scripts[] = js/script.js
+
+; Regions
+
+; Settings
