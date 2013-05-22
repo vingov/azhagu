@@ -17,6 +17,10 @@ img {
   max-width: 100%;
 }
 
+a{
+	text-decoration: none;
+	color: $default;
+	}
 
 /* Wrapper */
 
@@ -346,13 +350,18 @@ img {
 	.footer-region-first{
 		@include clearfix;
 		
-		h2.title{
+		h2{
 			font-weight: 600;
 			font-size: 1.4em;
 			background: url('../images/dotted-line-dark.png') bottom left repeat-x;
 			padding-bottom: .2em;
 			margin-bottom: .2em;
 			}
+		ul{
+			li{
+				margin-left: 0;
+			}
+		}
 		.footer-first{
 			width: 293px;
 			float: left;
@@ -361,7 +370,10 @@ img {
 			ul{
 				@include clearfix;
 				margin-top: 10px;
-
+				
+				li:first-child{
+					padding:0;
+					}
 				li{
 					float: left;
 					width: 24px;
@@ -371,23 +383,7 @@ img {
 						display: block;
 						width: 24px;
 						height: 24px;
-						text-indent: -9999px;
 						}
-					}
-				li.first-icon{
-					background: url('../images/icons/icon-facebook.png') 0 0 no-repeat;
-					}
-				li.second-icon{
-					background: url('../images/icons/icon-twitter.png') 0 0 no-repeat;
-					}
-				li.third-icon{
-					background: url('../images/icons/icon-google.png') 0 0 no-repeat;
-					}
-				li.fourth-icon{
-					background: url('../images/icons/icon-pintrest.png') 0 0 no-repeat;
-					}
-				li.fifth-icon{
-					background: url('../images/icons/icon-rss.png') 0 0 no-repeat;
 					}
 
 				}

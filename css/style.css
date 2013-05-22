@@ -12,6 +12,11 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
 /* Wrapper */
 #wrapper {
   width: 960px;
@@ -318,12 +323,15 @@ img {
   overflow: hidden;
   *zoom: 1;
 }
-#footer-wrapper .footer-region-first h2.title {
+#footer-wrapper .footer-region-first h2 {
   font-weight: 600;
   font-size: 1.4em;
   background: url("../images/dotted-line-dark.png") bottom left repeat-x;
   padding-bottom: .2em;
   margin-bottom: .2em;
+}
+#footer-wrapper .footer-region-first ul li {
+  margin-left: 0;
 }
 #footer-wrapper .footer-region-first .footer-first {
   width: 293px;
@@ -335,6 +343,9 @@ img {
   *zoom: 1;
   margin-top: 10px;
 }
+#footer-wrapper .footer-region-first .footer-first ul li:first-child {
+  padding: 0;
+}
 #footer-wrapper .footer-region-first .footer-first ul li {
   float: left;
   width: 24px;
@@ -344,22 +355,6 @@ img {
   display: block;
   width: 24px;
   height: 24px;
-  text-indent: -9999px;
-}
-#footer-wrapper .footer-region-first .footer-first ul li.first-icon {
-  background: url("../images/icons/icon-facebook.png") 0 0 no-repeat;
-}
-#footer-wrapper .footer-region-first .footer-first ul li.second-icon {
-  background: url("../images/icons/icon-twitter.png") 0 0 no-repeat;
-}
-#footer-wrapper .footer-region-first .footer-first ul li.third-icon {
-  background: url("../images/icons/icon-google.png") 0 0 no-repeat;
-}
-#footer-wrapper .footer-region-first .footer-first ul li.fourth-icon {
-  background: url("../images/icons/icon-pintrest.png") 0 0 no-repeat;
-}
-#footer-wrapper .footer-region-first .footer-first ul li.fifth-icon {
-  background: url("../images/icons/icon-rss.png") 0 0 no-repeat;
 }
 #footer-wrapper .footer-region-first .footer-second {
   width: 293px;

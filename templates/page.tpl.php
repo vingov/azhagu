@@ -143,7 +143,6 @@
         </div>
         </header>
         <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
 
         </div>
       </section>
@@ -159,26 +158,44 @@
   <footer id="footer-wrapper"> <!-- footer-wrapper starts here -->
     <div class='footer-region-first'>
       <div class="footer-first">
-        <h2 class="title">Social Block</h2>
-        <ul>
-          <li class="first-icon"><a href="#">Facebook</a></li>
-          <li class="second-icon"><a href="#">Twitter</a></li>  
-          <li class="third-icon"><a href="#">Google Plus</a></li>
-          <li class="fourth-icon"><a href="#">Pintrest</a></li>
-          <li class="fifth-icon"><a href="#">RSS</a></li>         
-        </ul>
+         <?php if (theme_get_setting('social_block', 'azhagu')): ?>
+             <?php 
+              $facebook_url = theme_get_setting('facebook_url', 'azhagu'); 
+              $twitter_url = theme_get_setting('twitter_url', 'azhagu'); 
+              $gplus_url = theme_get_setting('gplus_url', 'azhagu'); 
+              $pinterest_url = theme_get_setting('pinterest_url', 'azhagu');
+              ?>
+            <h2 class="title">Social Block</h2>
+            <ul>
+                <?php if ($facebook_url): ?><li>
+                  <a target="_blank" title="<?php print $site_name; ?> in Facebook" href="<?php print $facebook_url; ?>"><img alt="Facebook" src="<?php print base_path() . drupal_get_path('theme', 'azhagu') . '/images/icons/icon-facebook.png'; ?>"> </a>
+                </li><?php endif; ?>
+                <?php if ($twitter_url): ?><li>
+                  <a target="_blank" title="<?php print $site_name; ?> in Twitter" href="<?php print $twitter_url; ?>"><img alt="Twitter" src="<?php print base_path() . drupal_get_path('theme', 'azhagu') . '/images/icons/icon-twitter.png'; ?>"> </a>
+                </li><?php endif; ?>
+                <?php if ($gplus_url): ?><li>
+                  <a target="_blank" title="<?php print $site_name; ?> in Google+" href="<?php print $gplus_url; ?>"><img alt="Google+" src="<?php print base_path() . drupal_get_path('theme', 'azhagu') . '/images/icons/icon-google.png'; ?>"> </a>
+                </li><?php endif; ?>
+                <?php if ($pinterest_url): ?><li>
+                  <a target="_blank" title="<?php print $site_name; ?> in Pinterest" href="<?php print $pinterest_url; ?>"><img alt="Pinterest" src="<?php print base_path() . drupal_get_path('theme', 'azhagu') . '/images/icons/icon-pinterest.png'; ?>"> </a>
+                </li><?php endif; ?>
+                <li>
+                  <a target="_blank" title="<?php print $site_name; ?> in RSS" href="<?php print $front_page; ?>rss.xml"><img alt="RSS" src="<?php print base_path() . drupal_get_path('theme', 'azhagu') . '/images/icons/icon-rss.png'; ?>"> </a>
+                </li>             
+            </ul>
+        <?php endif; ?>
       </div>
       <div class="footer-second">
-        <h2 class="title">Footer Second Block</h2>
-        <p>Consequat nisl pneum praemitto. Caecus letalis nobis. Abigo aliquip at brevitas camur commoveo scisco sit volutpat.</p>
+        <?php print render($page['footer_secondcolumn']); ?>
       </div>
       <div class="footer-third">
-        <h2 class="title">Footer Third Block</h2>
-        <p>Consequat nisl pneum praemitto. Caecus letalis nobis. Abigo aliquip at brevitas camur commoveo scisco sit volutpat.</p>
+        <?php print render($page['footer_thirdcolumn']); ?>       
       </div>
     </div>
     <div class='footer-region-second'>
-      <p>Copyright</p>
+      <p>
+        <?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>. <?php print t('Theme by'); ?>  <a href="http://www.drupal-responsive.com" target="_blank">Drupal Responsive</a>
+      </p>
     </div>
   </footer><!-- footer-wrapper ends here -->
 
