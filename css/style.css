@@ -173,6 +173,8 @@ a {
   text-decoration: none;
   color: #888888;
   font-size: .900em;
+  display: inline-block;
+  padding-right: 5px;
 }
 #content-wrapper section#content article.node header .title-meta .meta ul li a:hover {
   text-decoration: underline;
@@ -284,6 +286,8 @@ a {
   left: -30px;
   top: 1px;
   position: relative;
+  cursor: hand;
+  cursor: pointer;
 }
 #content-wrapper aside#sidebar-first .block {
   margin-bottom: 1.5em;
@@ -371,4 +375,39 @@ a {
   margin-top: 25px;
   background: url("../images/copyright-bg.png") top center no-repeat;
   font-size: .800em;
+}
+
+/* Form Elements */
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  width: 75%;
+  color: #888888;
+}
+
+#user-login-form input[type="submit"] {
+  color: #222222;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e8e8e8), color-stop(100%, #d7d7d7));
+  background-image: -webkit-linear-gradient(#e8e8e8, #d7d7d7);
+  background-image: -moz-linear-gradient(#e8e8e8, #d7d7d7);
+  background-image: -o-linear-gradient(#e8e8e8, #d7d7d7);
+  background-image: linear-gradient(#e8e8e8, #d7d7d7);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: .900em;
+  display: block;
+  border: 0;
+  cursor: hand;
+  cursor: pointer;
 }

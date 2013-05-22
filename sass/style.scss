@@ -183,6 +183,8 @@ a{
 									text-decoration: none;
 									color: $gray;
 									font-size: .900em;
+									display: inline-block;
+									padding-right: 5px;
 									}
 								a:hover{
 									text-decoration: underline;
@@ -303,6 +305,8 @@ a{
 				left: -30px;
 				top: 1px;
 				position: relative;
+				cursor: hand;
+				cursor: pointer;
 				}
 
 			}
@@ -404,5 +408,31 @@ a{
 		margin-top: 25px;
 		background: url('../images/copyright-bg.png') top center no-repeat;
 		font-size: .800em;
+		}
+	}
+
+/* Form Elements */
+
+input[type="text"],
+input[type="password"]{
+	border: 1px solid $txtborder;
+	padding: 10px;
+	@include border-radius(3px);
+	width: 75%;
+	color: $gray;
+	}
+
+#user-login-form{
+	input[type="submit"]{
+		color: $default;
+		@include background-image(linear-gradient(#e8e8e8, #d7d7d7));
+		@include border-radius(3px);
+		padding: 10px 20px;
+		text-decoration: none;
+		font-weight: .900em;
+		display: block;
+		border: 0;
+		cursor: hand; 
+		cursor: pointer;
 		}
 	}
