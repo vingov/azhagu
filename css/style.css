@@ -215,6 +215,17 @@ img {
   font-weight: .900em;
   display: block;
 }
+#content-wrapper section#content h2.title {
+  font-size: 1.8em;
+  font-weight: 600;
+  line-height: 1em;
+  background: url("../images/dotted-line.png") bottom left repeat-x;
+  padding-bottom: 10px;
+}
+#content-wrapper section#content h2.title a {
+  color: #222222;
+  text-decoration: none;
+}
 #content-wrapper section#content article.node-page {
   background: url("../images/dotted-line.png") bottom left repeat-x;
   padding-bottom: 25px;
@@ -283,6 +294,9 @@ img {
 #content-wrapper aside#sidebar-first .block .content ul li {
   padding: 0 0 0 15px;
   background: url("../images/block-arrow.png") 0px 9px no-repeat;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
 }
 #content-wrapper aside#sidebar-first .block .content ul li a {
   text-decoration: none;

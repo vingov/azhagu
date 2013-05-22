@@ -230,6 +230,17 @@ img {
 			
 
 			}
+		h2.title{
+			font-size: 1.8em;
+			font-weight: 600;
+			line-height: 1em;
+			background: url('../images/dotted-line.png') bottom left repeat-x;
+			padding-bottom: 10px;
+			a{
+				color: $default;
+				text-decoration: none;
+				}
+			}
 
 		article.node-page{
 			background: url('../images/dotted-line.png') bottom left repeat-x;
@@ -307,6 +318,9 @@ img {
 					li{
 						padding: 0 0 0 15px;
 						background: url('../images/block-arrow.png') 0px 9px no-repeat;
+						list-style-image: none;
+						list-style-type: none;
+						margin:0;
 
 						a{
 							text-decoration: none;

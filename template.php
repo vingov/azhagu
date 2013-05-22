@@ -13,7 +13,20 @@ function azhagu_preprocess_node(&$variables) {
 
 	$variables['content']['field_tags']['#theme'] = 'links';
   
-	unset($variables['content']['links']['comment']);
+  unset($variables['content']['links']['node']['#links']['node-readmore']);
+
+  unset($variables['content']['links']['comment']);
+
+  // Let's get that read more link out of the generated links variable!
+  unset($variables['content']['links']['node']['#links']['node-readmore']);
+
+// Now let's put it back as it's own variable! So it's actually versatile!
+    $variables['newreadmore'] = t('<footer> <a href="!title">Read More</a> </footer>',
+      array(
+        '!title' => $variables['node_url'],
+      )
+);
+
 }
 
 
