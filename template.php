@@ -25,7 +25,9 @@ function azhagu_preprocess_node(&$variables) {
       array(
         '!title' => $variables['node_url'],
       )
-);
+  );
+
+
 
 }
 
@@ -38,4 +40,13 @@ function azhagu_preprocess_username(&$variables) {
   if (isset($account->field_real_name[LANGUAGE_NONE][0]['safe_value'])) {
     $variables['name'] = $account->field_real_name[LANGUAGE_NONE][0]['safe_value'];
   }
+}
+
+
+function azhagu_preprocess_pager(&$variables, $hook) {
+
+  //Removing the first & last from the pager
+  if ($variables['quantity'] > 5) $variables['quantity'] = 5;
+  $variables['tags'][0] = FALSE;
+  $variables['tags'][4] = FALSE;
 }

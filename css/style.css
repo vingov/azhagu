@@ -2,7 +2,7 @@
 /* General Styles */
 body {
   nowhitespace: afterproperty;
-  font: 14px/1.8 "Open Sans", Helvetica, Arial, sans-serif;
+  font: 14px/1.8 'Open Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background: #e6e7e7;
@@ -410,4 +410,26 @@ input[type="password"] {
   border: 0;
   cursor: hand;
   cursor: pointer;
+}
+
+/* Pagination */
+.pager li.pager-next a {
+  background: url("../images/pagination-right.png") center no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+}
+.pager li.pager-previous a {
+  background: url("../images/pagination-left.png") center no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+}
+.pager li.pager-current {
+  background: #d8e360;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
 }

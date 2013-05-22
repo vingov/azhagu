@@ -436,3 +436,41 @@ input[type="password"]{
 		cursor: pointer;
 		}
 	}
+
+/* Pagination */
+
+.pager{
+
+	li.pager-next{
+
+		a
+			{
+			background: url('../images/pagination-right.png') center no-repeat;
+			display: inline-block;
+			text-indent: -9999px;
+			width: 30px;
+			height: 30px;
+			}
+		}
+	li.pager-previous{
+
+		a
+			{
+			background: url('../images/pagination-left.png') center no-repeat;
+			display: inline-block;
+			text-indent: -9999px;
+			width: 30px;
+			height: 30px;
+			}
+		}
+	li.pager-current{
+			background: #d8e360;
+			display: inline-block;
+			width: 30px;
+			height: 30px;		
+		}
+
+	}
+
+
+
