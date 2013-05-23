@@ -108,7 +108,7 @@
           <?php if ($tags = render($content['field_tags'])): ?>
             <li class="tags"><span><?php print $tags; ?></span></li>
           <?php endif; ?>
-          <li class="comments"><span><a href="#"><?php print $comment_count; ?> Comments</a></span></li>
+          <li class="comments"><span><a href=<?php print $node_url;?>#comments><?php print $comment_count; ?> Comments</a></span></li>
         </ul>
       </div>
     </div>
