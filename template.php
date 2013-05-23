@@ -27,8 +27,6 @@ function azhagu_preprocess_node(&$variables) {
       )
   );
 
-
-
 }
 
 
@@ -50,3 +48,13 @@ function azhagu_preprocess_pager(&$variables, $hook) {
   $variables['tags'][0] = FALSE;
   $variables['tags'][4] = FALSE;
 }
+
+function azhagu_preprocess_comment(&$variables) {
+  $comment = $variables['elements']['#comment'];
+  $node = $variables['elements']['#node'];
+  $variables['created']   = format_date($comment->created, 'custom', 'l, d/m/Y');
+  $variables['changed']   = format_date($comment->changed, 'custom', 'l, d/m/Y');
+
+  $variables['submitted'] = t('Submitted by !username on !datetime', array('!username' => $variables['author'], '!datetime' => $variables['created']));
+}
+

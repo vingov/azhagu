@@ -123,7 +123,7 @@
     <?php endif; ?>
 
   </div> <!-- Header-wrapper ends here -->
-
+  <?php if (!empty($messages)): print $messages; endif; ?>
   <div id="content-wrapper"> <!-- content-wrapper starts here -->
     <div id="primary">
       <!-- content -->

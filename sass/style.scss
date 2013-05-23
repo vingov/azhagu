@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background: $bodybg;
+  font-weight: 300;
 }
 
 img {
@@ -20,8 +21,11 @@ img {
 a{
 	text-decoration: none;
 	color: $default;
+	color: $lemongreendark;
 	}
-
+a:hover{
+	text-decoration: underline;
+}
 /* Wrapper */
 
 #wrapper{
@@ -178,13 +182,15 @@ a{
 								display: inline-block;
 								padding:0 15px 0 20px;
 								color: $gray;
+								font-weight: 400;
+								font-size: .900em;
 
 								a{
 									text-decoration: none;
 									color: $gray;
-									font-size: .900em;
 									display: inline-block;
 									padding-right: 5px;
+									font-weight: 400;
 									}
 								a:hover{
 									text-decoration: underline;
@@ -473,4 +479,123 @@ input[type="password"]{
 	}
 
 
+/* Table */
+table{
+  margin: 0 0 1.5em;
+  width: 100%;
+  border:1px solid #ddd;
+  background: $lightgray !important;
+  	tr.even,
+  	tr.odd{
+		background: $lightgray !important;
+  		}
+	tr{
+		padding:5px 5px;
+		td{
+			padding:5px 10px;
+			border-top:1px solid #ddd;
+			border-right:1px solid #ddd;
 
+			a:hover{
+				text-decoration:underline;
+				}
+
+			.node-author{
+				padding: 0 0 0 20px;
+				background: url('../images/icons/icon-user.png') 0px 8px no-repeat;
+
+				a{
+					color: $lemongreendark;
+					font-size: .900em;
+					font-weight: 600;
+					}
+				a:hover{
+					text-decoration: underline;
+					}
+				}
+			}
+	}
+
+}
+
+/* Comments */
+
+.comment-wrapper{
+
+
+	h2.title{
+		margin-bottom: .5em;
+		}
+
+	.comment{
+		@include clearfix;
+		border: 1px solid $grayborder;
+		padding: 10px;
+		background: $lightgray;
+		margin-bottom: 10px;
+
+		.user-picture{
+			display: inline-block;
+			width: 75px;
+			float: left;
+
+			img{
+				width: 70%;
+				height: 70%;
+				border: 1px dotted $grayborder;
+				padding: 5px;
+				}
+			}
+		h3{
+			font-size: 1.2em;
+			font-weight: 600;
+			}
+		.content{
+			font-size: .900em;
+			}
+		.submitted{
+			font-size: .800em;
+
+			a.permalink{
+				background: url('../images/icons/icon-permalink.png') 0 0 no-repeat;
+				text-indent: -9999px;
+				display: inline-block;
+				width: 10px;
+				height: 11px;
+				}
+			.username{
+				font-weight: 600;
+				}
+			}
+		.links{
+			li{
+				a{
+					color: $default;
+					@include background-image(linear-gradient(#e8e8e8, #d7d7d7));
+					@include border-radius(2px);
+					padding: 0 10px;
+					text-decoration: none;
+					font-size: .900em;
+					display: inline-block;
+					font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+
+/* Misc */
+
+.marker,
+.new{
+	display: inline-block;
+	width: 30px;
+	height: 14px;
+	@include background-image(linear-gradient(#fafafa, #d9d9d9));
+	@include border-radius(2px);
+	font-size: .800em;
+	color: $red;
+	text-align: center;
+	font-weight: 600;
+	line-height: 11px;
+	}
