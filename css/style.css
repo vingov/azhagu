@@ -169,6 +169,7 @@ a:hover {
 #content-wrapper section#content article.node header .title-meta h2.title a {
   color: #222222;
   text-decoration: none;
+  line-height: 1.2em;
 }
 #content-wrapper section#content article.node header .title-meta .meta ul li {
   display: inline-block;
@@ -489,12 +490,10 @@ table tr td .node-author a:hover {
   margin: 10px 0 0 0;
 }
 
-.comment-wrapper h2.title,
-.region-content h2.title {
+.comment-wrapper h2.title {
   margin-bottom: .5em;
 }
-.comment-wrapper .comment,
-.region-content .comment {
+.comment-wrapper .comment {
   overflow: hidden;
   *zoom: 1;
   border: 1px solid #dadada;
@@ -502,46 +501,38 @@ table tr td .node-author a:hover {
   background: #f7f7f7;
   margin-bottom: 10px;
 }
-.comment-wrapper .comment .user-picture,
-.region-content .comment .user-picture {
+.comment-wrapper .comment .user-picture {
   display: inline-block;
   width: 75px;
   float: left;
 }
-.comment-wrapper .comment .user-picture img,
-.region-content .comment .user-picture img {
+.comment-wrapper .comment .user-picture img {
   width: 70%;
   height: 70%;
   border: 1px dotted #dadada;
   padding: 5px;
 }
-.comment-wrapper .comment h3,
-.region-content .comment h3 {
+.comment-wrapper .comment h3 {
   font-size: 1.2em;
   font-weight: 600;
 }
-.comment-wrapper .comment .content,
-.region-content .comment .content {
+.comment-wrapper .comment .content {
   font-size: .900em;
 }
-.comment-wrapper .comment .submitted,
-.region-content .comment .submitted {
+.comment-wrapper .comment .submitted {
   font-size: .800em;
 }
-.comment-wrapper .comment .submitted a.permalink,
-.region-content .comment .submitted a.permalink {
+.comment-wrapper .comment .submitted a.permalink {
   background: url("../images/icons/icon-permalink.png") 0 0 no-repeat;
   text-indent: -9999px;
   display: inline-block;
   width: 10px;
   height: 11px;
 }
-.comment-wrapper .comment .submitted .username,
-.region-content .comment .submitted .username {
+.comment-wrapper .comment .submitted .username {
   font-weight: 600;
 }
-.comment-wrapper .comment .links li a,
-.region-content .comment .links li a {
+.comment-wrapper .comment .links li a {
   color: #222222;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e8e8e8), color-stop(100%, #d7d7d7));
   background-image: -webkit-linear-gradient(#e8e8e8, #d7d7d7);
