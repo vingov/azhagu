@@ -121,10 +121,12 @@
         </nav>
       </div>
     <?php endif; ?>
+   </div> <!-- Header-wrapper ends here -->
 
-  </div> <!-- Header-wrapper ends here -->
   <?php if (!empty($messages)): print $messages; endif; ?>
+
   <div id="content-wrapper"> <!-- content-wrapper starts here -->
+<div id="breadcrumb" class="breadcrumb"><?php print $breadcrumb; ?></div>
     <div id="primary">
       <!-- content -->
       <section id="content">
@@ -184,6 +186,7 @@
                 </li>             
             </ul>
         <?php endif; ?>
+             <?php print render($page['footer_firstcolumn']); ?>
       </div>
       <div class="footer-second">
         <?php print render($page['footer_secondcolumn']); ?>

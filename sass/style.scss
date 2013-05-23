@@ -491,10 +491,17 @@ table{
   		}
 	tr{
 		padding:5px 5px;
+		th{
+			background: $gray;
+			color: $white;
+			padding: 5px;
+			font-weight: 600;
+			}
 		td{
 			padding:5px 10px;
 			border-top:1px solid #ddd;
 			border-right:1px solid #ddd;
+			font-weight: 400;
 
 			a:hover{
 				text-decoration:underline;
@@ -519,8 +526,14 @@ table{
 }
 
 /* Comments */
+.page-comment-reply{
+	.region-content{
+		margin: 10px 0 0 0;
+		}
+	}
 
-.comment-wrapper{
+.comment-wrapper,
+.region-content{
 
 
 	h2.title{
@@ -599,3 +612,6 @@ table{
 	font-weight: 600;
 	line-height: 11px;
 	}
+
+
+

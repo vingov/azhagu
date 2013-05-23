@@ -15,11 +15,11 @@ function azhagu_form_system_theme_settings_alter(&$form, &$form_state) {
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );
-  $form['azhagu_settings']['socialblock']['socialblock_display'] = array(
+  $form['azhagu_settings']['socialblock']['social_block'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Show Social Icon'),
-    '#default_value' => theme_get_setting('socialblock_display','azhagu'),
-    '#description'   => t("Check this option to show Social Icon. Uncheck to hide."),
+    '#title' => t('Show Social Icons'),
+    '#default_value' => theme_get_setting('social_block','azhagu'),
+    '#description'   => t("Check this option to show Social Icons."),
   );
   $form['azhagu_settings']['socialblock']['twitter_url'] = array(
     '#type' => 'textfield',
