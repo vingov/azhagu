@@ -6,9 +6,12 @@ core		=	7.x
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/style.css
 
+
 ; JavaScript files
 scripts[] = js/jquery.autofill.js
 scripts[] = js/script.js
+scripts[] = js/superfish.js
+scripts[] = js/initialize.js
 
 ; Regions
 regions[header] = Header

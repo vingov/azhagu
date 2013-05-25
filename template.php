@@ -58,3 +58,29 @@ function azhagu_preprocess_comment(&$variables) {
   $variables['submitted'] = t('Submitted by !username on !datetime', array('!username' => $variables['author'], '!datetime' => $variables['created']));
 }
 
+
+function azhagu_preprocess_page(&$variables) {
+  // Get the entire main menu tree
+  $main_menu_tree = menu_tree_all_data('main-menu');
+
+  // Add the rendered output to the $main_menu_expanded variable
+  $variables['main_menu_expanded'] = menu_tree_output($main_menu_tree);
+
+}
+
+function azhagu_menu_link(array $variables) {
+    $element = $variables['element'];
+    $sub_menu = '';
+
+    if ($element['#below']) {
+        $sub_menu = drupal_render($element['#below']);
+    }
+    $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+    // if link class is active, make li class as active too
+    if(strpos($output,"active")>0){
+        $element['#attributes']['class'][] = "active";
+    }
+    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+

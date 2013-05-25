@@ -74,14 +74,18 @@ a:hover {
   background-image: -moz-linear-gradient(#fafafa, #d8d8d8);
   background-image: -o-linear-gradient(#fafafa, #d8d8d8);
   background-image: linear-gradient(#fafafa, #d8d8d8);
+  position: relative;
+  height: 42px;
 }
 #header-wrapper #main-menu nav ul {
-  overflow: hidden;
-  *zoom: 1;
+  position: absolute;
 }
 #header-wrapper #main-menu nav ul li {
   float: left;
   padding: 0 12px 0 12px;
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
 }
 #header-wrapper #main-menu nav ul li a {
   text-decoration: none;
@@ -96,9 +100,35 @@ a:hover {
   background-image: -moz-linear-gradient(#c2cf34, #8e9a1d);
   background-image: -o-linear-gradient(#c2cf34, #8e9a1d);
   background-image: linear-gradient(#c2cf34, #8e9a1d);
+  margin: 0;
 }
 #header-wrapper #main-menu nav ul li.active a {
   color: white;
+}
+#header-wrapper #main-menu nav ul li.expanded {
+  list-style-image: none;
+  list-style-type: none;
+  position: relative;
+}
+#header-wrapper #main-menu nav ul li.expanded ul {
+  position: absolute;
+  background: #c2cd4e;
+  z-index: 99;
+  left: 0;
+}
+#header-wrapper #main-menu nav ul li.expanded ul li {
+  display: inline-block;
+  clear: both;
+  margin: 0;
+}
+#header-wrapper #main-menu nav ul li.expanded ul li {
+  background: none;
+}
+#header-wrapper #main-menu nav ul li.expanded ul li a {
+  color: #222222;
+}
+#header-wrapper #main-menu nav ul li.expanded ul li.active {
+  background: none;
 }
 
 /* Content */
@@ -447,7 +477,7 @@ input[type="password"] {
 table {
   margin: 0 0 1.5em;
   width: 100%;
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   background: #f7f7f7 !important;
 }
 table tr.even,
@@ -465,8 +495,8 @@ table tr th {
 }
 table tr td {
   padding: 5px 10px;
-  border-top: 1px solid #dddddd;
-  border-right: 1px solid #dddddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   font-weight: 400;
 }
 table tr td a:hover {
