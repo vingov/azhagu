@@ -1,0 +1,158 @@
+@import "compass";
+@import "base";
+
+/* Tablet (Portrait) = Design for a width of 730px
+================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	#wrapper{
+		width: 690px;
+		}
+
+	#content-wrapper{
+		background: $white;
+
+		section#content{
+			margin: 0;
+			width: auto;
+			}
+		aside#sidebar-first{
+			width: 100%;
+			}
+		}
+	#footer-wrapper{ 
+		.footer-region-first{
+			.footer-first{
+				width: 100%;
+				}
+			.footer-second{
+				width: 100%
+				}
+			.footer-third{
+				width: 100%
+				}
+			}
+		}
+	}
+
+/* Mobile (Portrait) = Design for a width of 280px
+================================================== */
+
+@media only screen and (max-width: 767px) {
+	#wrapper{
+		width: 280px;
+		}
+
+	#header-wrapper{
+    	#branding{
+    		#name-and-slogan{
+    			width: 60%;
+
+    			h1{
+    				font-size: 1.175em;
+    				line-height: 1em;
+    				}
+    			#site-slogan{
+    				font-size: .800em;
+    				}
+    			}
+    		}
+    	}
+
+		#content-wrapper{
+		background: $white;
+
+		section#content{
+			margin: 0;
+			width: 240px;
+
+			article.node{
+				header{
+					.title-meta{
+						width: 70%;
+						}
+					}
+				}
+			}
+		aside#sidebar-first{
+			width: 100%;
+			}
+		}
+	
+	#footer-wrapper{ 
+		.footer-region-first{
+			.footer-first{
+				width: 100%;
+				}
+			.footer-second{
+				width: 100%
+				}
+			.footer-third{
+				width: 100%
+				}
+			}
+		}
+
+	}
+
+/* Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  #wrapper {
+    width: 330px;
+
+    #header-wrapper{
+    	#branding{
+    		#name-and-slogan{
+    			width: 65%;
+
+    			h1{
+    				font-size: 1.375em;
+    				}
+    			}
+    		}
+    	}
+
+    #content-wrapper{
+		background: $white;
+
+		section#content{
+			margin: 0;
+			width: 290px;
+
+			article.node{
+				header{
+					.title-meta{
+						width: 75%;
+						}
+					}
+				}
+			}
+		aside#sidebar-first{
+			width: 100%;
+			}
+		}
+
+  }
+
+  	#footer-wrapper{ 
+		.footer-region-first{
+			.footer-first{
+				width: 100%;
+				}
+			.footer-second{
+				width: 100%
+				}
+			.footer-third{
+				width: 100%
+				}
+			}
+		}
+
+}
+

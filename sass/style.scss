@@ -205,7 +205,7 @@ a:hover{
 					margin-left: 15px;
 					float: left;
 					display: block;
-					width: 540px;
+					width: 89%;
 
 					h2.title{
 						font-size: 1.8em;
@@ -415,32 +415,33 @@ a:hover{
 				margin-left: 0;
 			}
 		}
-		.footer-first{
-			width: 293px;
-			float: left;
-			padding-right: 20px;
+			.footer-first{
+				width: 293px;
+				float: left;
+				padding-right: 20px;
 
-			ul{
-				@include clearfix;
-				margin-top: 10px;
-				
-				li:first-child{
-					padding:0;
-					}
-				li{
-					float: left;
-					width: 24px;
-					padding: 0 0 0 8px;
 
-					a{
-						display: block;
-						width: 24px;
-						height: 24px;
+				ul.social{
+					@include clearfix;
+					margin-top: 10px;
+					
+					li:first-child{
+						padding:0;
 						}
-					}
+					li{
+						float: left;
+						width: 24px;
+						padding: 0 0 0 8px;
 
+						a{
+							display: block;
+							width: 24px;
+							height: 24px;
+							}
+						}
+
+					}
 				}
-			}
 		.footer-second{
 			width: 293px;
 			float: left;
@@ -653,4 +654,10 @@ table{
 	text-align: center;
 	font-weight: 600;
 	line-height: 11px;
+	}
+ul{
+		li.collapsed{
+		list-style-image: none;
+		list-style-type: none;
+		}
 	}

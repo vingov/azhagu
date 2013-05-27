@@ -187,7 +187,7 @@ a:hover {
   margin-left: 15px;
   float: left;
   display: block;
-  width: 540px;
+  width: 89%;
 }
 #content-wrapper section#content article.node header .title-meta h2.title {
   font-size: 1.8em;
@@ -381,20 +381,20 @@ a:hover {
   float: left;
   padding-right: 20px;
 }
-#footer-wrapper .footer-region-first .footer-first ul {
+#footer-wrapper .footer-region-first .footer-first ul.social {
   overflow: hidden;
   *zoom: 1;
   margin-top: 10px;
 }
-#footer-wrapper .footer-region-first .footer-first ul li:first-child {
+#footer-wrapper .footer-region-first .footer-first ul.social li:first-child {
   padding: 0;
 }
-#footer-wrapper .footer-region-first .footer-first ul li {
+#footer-wrapper .footer-region-first .footer-first ul.social li {
   float: left;
   width: 24px;
   padding: 0 0 0 8px;
 }
-#footer-wrapper .footer-region-first .footer-first ul li a {
+#footer-wrapper .footer-region-first .footer-first ul.social li a {
   display: block;
   width: 24px;
   height: 24px;
@@ -602,4 +602,9 @@ table tr td .node-author a:hover {
   text-align: center;
   font-weight: 600;
   line-height: 11px;
+}
+
+ul li.collapsed {
+  list-style-image: none;
+  list-style-type: none;
 }

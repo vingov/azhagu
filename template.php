@@ -30,6 +30,21 @@ function azhagu_preprocess_node(&$variables) {
 }
 
 
+function azhagu_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+  $delimiter = theme_get_setting('breadcrumb_delimiter');
+
+  if (!empty($breadcrumb)) {
+    // Use CSS to hide titile .element-invisible.
+    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+    // comment below line to hide current page to breadcrumb
+$breadcrumb[] = drupal_get_title();
+    $output .= '<nav class="breadcrumb">' . implode($delimiter, $breadcrumb) . '</nav>';
+    return $output;
+  }
+}
+
+
 function azhagu_preprocess_username(&$variables) {
   
   $account = user_load($variables['account']->uid);

@@ -165,13 +165,21 @@
       <div class="footer-first">
          <?php if (theme_get_setting('social_block', 'azhagu')): ?>
              <?php 
+              $social_block_title = theme_get_setting('social_block_title', 'azhagu'); 
+              $default_title = 'Follow Us'; 
               $facebook_url = theme_get_setting('facebook_url', 'azhagu'); 
               $twitter_url = theme_get_setting('twitter_url', 'azhagu'); 
               $gplus_url = theme_get_setting('gplus_url', 'azhagu'); 
               $pinterest_url = theme_get_setting('pinterest_url', 'azhagu');
               ?>
-            <h2 class="title">Social Block</h2>
-            <ul>
+            <h2 class="title">
+              <?php if($social_block_title): ?>
+              <?php print $social_block_title; ?>
+              <?php elseif(!$social_block_title): ?>
+              <?php print $default_title; ?>
+              <?php endif; ?>
+            </h2>
+            <ul class="social">
                 <?php if ($facebook_url): ?><li>
                   <a target="_blank" title="<?php print $site_name; ?> in Facebook" href="<?php print $facebook_url; ?>"><img alt="Facebook" src="<?php print base_path() . drupal_get_path('theme', 'azhagu') . '/images/icons/icon-facebook.png'; ?>"> </a>
                 </li><?php endif; ?>

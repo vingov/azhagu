@@ -9,6 +9,19 @@
  */
 function azhagu_form_system_theme_settings_alter(&$form, &$form_state) {
 
+  $form['azhagu_settings']['breadcrumb'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Breadcrumb'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+    $form['azhagu_settings']['breadcrumb']['breadcrumb_delimiter'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Breadcrumb delimiter'),
+    '#size' => 4,
+    '#default_value' => theme_get_setting('breadcrumb_delimiter'),
+    '#description' => t("Don't forget spaces at either end... if you're into that sort of thing."),
+  );
   $form['azhagu_settings']['socialblock'] = array(
     '#type' => 'fieldset',
     '#title' => t('Social Icon'),
@@ -20,6 +33,12 @@ function azhagu_form_system_theme_settings_alter(&$form, &$form_state) {
     '#title' => t('Show Social Icons'),
     '#default_value' => theme_get_setting('social_block','azhagu'),
     '#description'   => t("Check this option to show Social Icons."),
+  );
+  $form['azhagu_settings']['socialblock']['social_block_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Social Block Title'),
+    '#default_value' => theme_get_setting('social_block_title', 'azhagu'),
+    '#description'   => t("Enter your Social Block title here. Leave blank to hide."),
   );
   $form['azhagu_settings']['socialblock']['twitter_url'] = array(
     '#type' => 'textfield',

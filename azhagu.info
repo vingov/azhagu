@@ -5,7 +5,7 @@ core		=	7.x
 ; CSS Stylesheets
 stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/style.css
-
+stylesheets[all][] = css/responsive.css
 
 ; JavaScript files
 scripts[] = js/jquery.autofill.js
@@ -30,7 +30,9 @@ regions[footer_thirdcolumn] = Footer third column
 regions[footer] = Footer
 
 ; Settings
+settings[breadcrumb_delimiter] = ' » '
 settings[social_block] = 1
+settings[social_block_title] = "Social Block"
 settings[facebook_url] = "https://www.facebook.com/ramesh.rasaiyan"
 settings[twitter_url] = "https://twitter.com/rameshrasaiyan"
 settings[gplus_url] = "https://plus.google.com/110077720383100502485"
