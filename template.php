@@ -99,3 +99,16 @@ function azhagu_menu_link(array $variables) {
     return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
 
+
+function azhagu_page_alter($page) {
+  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  $viewport = array(
+    '#type' => 'html_tag',
+    '#tag' => 'meta',
+    '#attributes' => array(
+    'name' =>  'viewport',
+    'content' =>  'width=device-width, initial-scale=1, maximum-scale=1'
+    )
+  );
+  drupal_add_html_head($viewport, 'viewport');
+}
