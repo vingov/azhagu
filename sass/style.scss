@@ -74,7 +74,7 @@ a:hover{
 		}
 
 		#main-menu{
-			nav{
+			nav#navigation{
 				@include background-image(linear-gradient(#fafafa, #d8d8d8));
 				position: relative;
 				height: 42px;
@@ -142,6 +142,10 @@ a:hover{
 									}
 								}
 							}
+					
+					.menu-icon{
+						display: none;
+					}
 
 				}
 			}

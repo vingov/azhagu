@@ -1,16 +1,11 @@
-jQuery(function($){
-  $(document).ready(function(){
-      
-    //superFish
-    $(function() { 
-      $("#main-menu nav ul.menu").superfish({
-        delay: 100,
-        autoArrows: false,
-        dropShadows: false,
-        animation: {opacity:'show', height:'show'},
-        speed: 'fast'
-      });
-    });
-  
-  }); // end doc ready
-}); // end function
+jQuery(document).ready(function(){
+    //jQuery('nav > ul#main-menu').superfish();
+
+    jQuery('nav#navigation').prepend('<div id="menu-icon">Menu</div>');
+
+    jQuery("#menu-icon").on("click", function(){
+		jQuery("#nav").slideToggle();
+		jQuery(this).toggleClass("active");
+	});
+
+  });

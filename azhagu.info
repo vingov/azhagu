@@ -4,14 +4,18 @@ core		=	7.x
 
 ; CSS Stylesheets
 stylesheets[all][] = css/reset.css
+#stylesheets[all][] = css/superfish.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/responsive.css
 
 ; JavaScript files
 scripts[] = js/jquery.autofill.js
 scripts[] = js/script.js
-scripts[] = js/superfish.js
+scripts[] = js/hoverIntent.js
+#scripts[] = js/superfish.js
+#scripts[] = js/uniform.js
 scripts[] = js/initialize.js
+#scripts[] = js/responsive.js
 
 ; Regions
 regions[header] = Header

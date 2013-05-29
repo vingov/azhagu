@@ -114,16 +114,14 @@
     </div>      
 
     <!-- Navigation -->
-    <?php if ($main_menu): ?>
+    <?php //if ($main_menu): ?>
       <div id="main-menu" class="navigation">
-        <nav>
+        <nav id="navigation" role="navigation">
           <?php  //print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')))); ?>
           <?php  print render($main_menu_expanded); ?>  
-
-
         </nav>
       </div>
-    <?php endif; ?>
+    <?php //endif; ?>
    </div> <!-- Header-wrapper ends here -->
 
   <?php if (!empty($messages)): print $messages; endif; ?>

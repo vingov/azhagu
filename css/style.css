@@ -2,7 +2,7 @@
 /* General Styles */
 body {
   nowhitespace: afterproperty;
-  font: 14px/1.8 "Open Sans", Helvetica, Arial, sans-serif;
+  font: 14px/1.8 'Open Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background: #e6e7e7;
@@ -68,7 +68,7 @@ a:hover {
 #header-wrapper #branding #name-and-slogan #site-slogan {
   color: white;
 }
-#header-wrapper #main-menu nav {
+#header-wrapper #main-menu nav#navigation {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fafafa), color-stop(100%, #d8d8d8));
   background-image: -webkit-linear-gradient(#fafafa, #d8d8d8);
   background-image: -moz-linear-gradient(#fafafa, #d8d8d8);
@@ -77,24 +77,24 @@ a:hover {
   position: relative;
   height: 42px;
 }
-#header-wrapper #main-menu nav ul {
+#header-wrapper #main-menu nav#navigation ul {
   position: absolute;
 }
-#header-wrapper #main-menu nav ul li {
+#header-wrapper #main-menu nav#navigation ul li {
   float: left;
   padding: 0 12px 0 12px;
   list-style-image: none;
   list-style-type: none;
   margin: 0;
 }
-#header-wrapper #main-menu nav ul li a {
+#header-wrapper #main-menu nav#navigation ul li a {
   text-decoration: none;
   color: #222222;
   padding: 8px 0 8px 0;
   display: block;
   font-weight: 600;
 }
-#header-wrapper #main-menu nav ul li.active {
+#header-wrapper #main-menu nav#navigation ul li.active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c2cf34), color-stop(100%, #8e9a1d));
   background-image: -webkit-linear-gradient(#c2cf34, #8e9a1d);
   background-image: -moz-linear-gradient(#c2cf34, #8e9a1d);
@@ -102,33 +102,36 @@ a:hover {
   background-image: linear-gradient(#c2cf34, #8e9a1d);
   margin: 0;
 }
-#header-wrapper #main-menu nav ul li.active a {
+#header-wrapper #main-menu nav#navigation ul li.active a {
   color: white;
 }
-#header-wrapper #main-menu nav ul li.expanded {
+#header-wrapper #main-menu nav#navigation ul li.expanded {
   list-style-image: none;
   list-style-type: none;
   position: relative;
 }
-#header-wrapper #main-menu nav ul li.expanded ul {
+#header-wrapper #main-menu nav#navigation ul li.expanded ul {
   position: absolute;
   background: #c2cd4e;
   z-index: 99;
   left: 0;
 }
-#header-wrapper #main-menu nav ul li.expanded ul li {
+#header-wrapper #main-menu nav#navigation ul li.expanded ul li {
   display: inline-block;
   clear: both;
   margin: 0;
 }
-#header-wrapper #main-menu nav ul li.expanded ul li {
+#header-wrapper #main-menu nav#navigation ul li.expanded ul li {
   background: none;
 }
-#header-wrapper #main-menu nav ul li.expanded ul li a {
+#header-wrapper #main-menu nav#navigation ul li.expanded ul li a {
   color: #222222;
 }
-#header-wrapper #main-menu nav ul li.expanded ul li.active {
+#header-wrapper #main-menu nav#navigation ul li.expanded ul li.active {
   background: none;
+}
+#header-wrapper #main-menu nav#navigation .menu-icon {
+  display: none;
 }
 
 /* Content */
