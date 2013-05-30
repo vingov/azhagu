@@ -2,7 +2,11 @@
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #wrapper {
-    width: 690px;
+    width: 750px;
+  }
+
+  #header-wrapper #navigation #menu-icon {
+    display: none;
   }
 
   #content-wrapper {
@@ -43,6 +47,84 @@
   #header-wrapper #branding #name-and-slogan #site-slogan {
     font-size: .800em;
   }
+  #header-wrapper #main-menu nav#navigation ul.menu {
+    display: none;
+    position: absolute;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c2cf34), color-stop(100%, #8e9a1d));
+    background-image: -webkit-linear-gradient(#c2cf34, #8e9a1d);
+    background-image: -moz-linear-gradient(#c2cf34, #8e9a1d);
+    background-image: -o-linear-gradient(#c2cf34, #8e9a1d);
+    background-image: linear-gradient(#c2cf34, #8e9a1d);
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li {
+    float: none;
+    width: 300px;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li:hover {
+    background: none;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li.active {
+    background: none;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li.active a {
+    color: #222222;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li.active:hover {
+    background: none;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li.active:hover a {
+    text-decoration: underline;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu ul li:hover > ul {
+    position: relative;
+    top: 0;
+    background: none;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu ul li:hover > ul li {
+    padding: 0 0 0 25px;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu ul li:hover > ul li:hover {
+    background: none;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu ul li:hover > ul li:hover > ul {
+    left: 0;
+    top: 0;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu {
+    position: relative;
+    top: 0;
+    background: none;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu li {
+    padding: 0 0 0 25px;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu li ul {
+    top: 0;
+    left: 0;
+  }
+  #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu li:hover ul {
+    top: 0;
+    left: 0;
+  }
+  #header-wrapper #main-menu nav#navigation #menu-icon {
+    display: block;
+    width: 50px;
+    height: 35px;
+    background: #c2cd4e url("../images/icons/icon-menu.png") 15px 12px no-repeat;
+    padding: 6px 0 0 45px;
+    cursor: hand;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  #header-wrapper #main-menu nav#navigation #menu-icon:hover {
+    background: #f2f9a2 url("../images/icons/icon-menu.png") 15px 12px no-repeat;
+  }
 
   #content-wrapper {
     background: white;
@@ -73,7 +155,7 @@
 /* Note: Design for a width of 480px */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   #wrapper {
-    width: 330px;
+    width: 460px;
   }
   #wrapper #header-wrapper #branding #name-and-slogan {
     width: 65%;
@@ -86,7 +168,7 @@
   }
   #wrapper #content-wrapper section#content {
     margin: 0;
-    width: 290px;
+    width: 440px;
   }
   #wrapper #content-wrapper section#content article.node header .title-meta {
     width: 75%;

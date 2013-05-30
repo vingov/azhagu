@@ -7,9 +7,16 @@
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 
 	#wrapper{
-		width: 690px;
+		width: 750px;
 		}
+	#header-wrapper{
+		#navigation{
 
+			#menu-icon{
+				display: none;
+				}
+			}
+		}
 	#content-wrapper{
 		background: $white;
 
@@ -58,6 +65,93 @@
     				}
     			}
     		}
+		#main-menu{
+	    	nav#navigation {
+
+		    		ul.menu{
+			    		display: none;
+			    		position: absolute;
+			    		@include background-image(linear-gradient(#c2cf34, #8e9a1d));
+						@include border-bottom-radius(5px);
+
+			    		li{
+			    			float: none;
+			    			width: 300px;
+			    			}
+			    		li:hover{
+			    			background: none;
+			    			}
+			    		li.active{
+			    			background: none;
+
+			    			a{
+			    				color: $default;
+			    				}
+			    			}
+
+			    		li.active:hover{
+			    			background: none;
+
+			    			a{
+			    				text-decoration: underline;
+			    				}
+			    			}
+			    		ul li:hover > ul{
+			    				position: relative;
+			    				top: 0;
+			    				background: none;
+
+			    				li{
+			    					padding: 0 0 0 25px;
+
+			    					}
+			    				li:hover{
+			    					background: none;
+			    					}
+			    				li:hover > ul{
+			    					left: 0;
+			    					top: 0
+			    					}
+			    			}
+			    		li.expanded{
+
+			    			ul.menu{
+			    				position: relative;
+			    				top: 0;
+			    				background: none;
+
+			    				li{
+			    					padding: 0 0 0 25px;
+
+			    					ul{
+			    						top: 0;
+			    						left: 0;
+			    						}
+			    					}
+			    				li:hover{
+			    					ul{
+			    						top: 0;
+			    						left: 0;
+			    						}
+			    					}
+			    				}
+			    			}
+				    	}
+			    	#menu-icon{
+			    		display: block;
+			    		width: 50px;
+			    		height: 35px;
+			    		background: $lemongreen url('../images/icons/icon-menu.png') 15px 12px no-repeat;
+			    		padding: 6px 0 0 45px;
+			    		cursor: hand;
+			    		cursor: pointer;
+			    		font-weight: 600;
+			    		}
+			    	#menu-icon:hover{
+			    		background: $limongreenlight url('../images/icons/icon-menu.png') 15px 12px no-repeat;
+			    	}
+		   		}
+		   	}
     	}
 
 		#content-wrapper{
@@ -104,7 +198,7 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
   #wrapper {
-    width: 330px;
+    width: 460px;
 
     #header-wrapper{
     	#branding{
@@ -123,7 +217,7 @@
 
 		section#content{
 			margin: 0;
-			width: 290px;
+			width: 440px;
 
 			article.node{
 				header{

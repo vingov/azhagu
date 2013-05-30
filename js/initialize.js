@@ -3,9 +3,9 @@ jQuery(document).ready(function(){
 
     jQuery('nav#navigation').prepend('<div id="menu-icon">Menu</div>');
 
-   /* jQuery("#menu-icon").on("click", function(){
-		jQuery("#nav").slideToggle();
+    jQuery("#menu-icon").bind("click", function(){
+		jQuery("nav#navigation ul.menu").slideToggle();
 		jQuery(this).toggleClass("active");
-	});*/
+	});
 
   });
