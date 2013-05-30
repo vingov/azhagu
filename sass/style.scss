@@ -79,7 +79,70 @@ a:hover{
 				position: relative;
 				height: 42px;
 
-				ul{
+				ul *{
+					list-style-image: none;
+					list-style-type: none;
+					margin: 0;
+					}
+
+				ul li{
+					float: left;
+					padding: 0 12px 0 12px;
+					position: relative;
+
+					a{
+						text-decoration: none;
+						color: $default;
+						padding: 8px 0 8px 0;
+						display: block;
+						font-weight: 600;
+						}
+					}
+				ul li:hover{
+					background: $limongreenlight;
+					}
+
+				ul > li.active{
+					@include background-image(linear-gradient(#c2cf34, #8e9a1d));
+					margin: 0;
+				}
+				ul > li.active > a{
+						color: $white;
+						}
+
+				ul ul{
+					position: absolute;
+					top: -999em;
+					}
+				ul li:hover > ul{
+						top: 40px;
+						left: 0;
+						z-index: 99;
+						@include background-image(linear-gradient(#c2cf34, #8e9a1d));
+						@include border-bottom-radius(5px); 
+
+						li{
+							padding: 0 12px 0 12px;
+							position: relative;
+							width: 180px;
+							}
+						li:hover{
+							background: $limongreenlight;
+							}
+						li:hover.active{
+							a{
+								color: $default;
+								}
+							}
+						li:hover > ul{
+							left: 190px;
+							top: 0;
+							z-index: 99;
+							}
+						}
+					
+
+			/*	ul{
 					position: absolute;
 
 					li{
@@ -111,6 +174,7 @@ a:hover{
 						position: relative;
 
 						ul{
+							display: none;
 							position: absolute;
 							background: $lemongreen;
   							z-index: 99;
@@ -120,12 +184,19 @@ a:hover{
 								display: inline-block;
 								clear: both;
 								margin: 0;
-
+								width: 180px;
 								}
 							
 							}
 
 						}
+						li.expanded ul li > li{
+
+							ul{
+								display: none;
+								}
+							}
+
 						li.expanded{
 
 								ul{
@@ -141,9 +212,9 @@ a:hover{
 										}
 									}
 								}
-							}
+							}*/
 					
-					.menu-icon{
+					#menu-icon{
 						display: none;
 					}
 

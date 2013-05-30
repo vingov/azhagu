@@ -2,7 +2,7 @@
 /* General Styles */
 body {
   nowhitespace: afterproperty;
-  font: 14px/1.8 'Open Sans', Helvetica, Arial, sans-serif;
+  font: 14px/1.8 "Open Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background: #e6e7e7;
@@ -76,16 +76,87 @@ a:hover {
   background-image: linear-gradient(#fafafa, #d8d8d8);
   position: relative;
   height: 42px;
+  			/*	ul{
+  					position: absolute;
+  
+  					li{
+  						float: left;
+  						padding: 0 12px 0 12px;
+  						list-style-image: none;
+  						list-style-type: none;
+  						margin: 0;
+  
+  						a{
+  							text-decoration: none;
+  							color: $default;
+  							padding: 8px 0 8px 0;
+  							display: block;
+  							font-weight: 600;
+  							}
+  						}
+  					li.active{
+  						@include background-image(linear-gradient(#c2cf34, #8e9a1d));
+  						margin: 0;
+  
+  						a{
+  							color: $white;
+  							}
+  						}
+  					li.expanded{
+  						list-style-image: none;
+  						list-style-type: none;
+  						position: relative;
+  
+  						ul{
+  							display: none;
+  							position: absolute;
+  							background: $lemongreen;
+    							z-index: 99;
+    							left: 0;
+  
+  							li{
+  								display: inline-block;
+  								clear: both;
+  								margin: 0;
+  								width: 180px;
+  								}
+  							
+  							}
+  
+  						}
+  						li.expanded ul li > li{
+  
+  							ul{
+  								display: none;
+  								}
+  							}
+  
+  						li.expanded{
+  
+  								ul{
+  									li{
+  										background: none;
+  
+  										a{
+  											color: $default;
+  											}
+  										}
+  									li.active{
+  										background: none;
+  										}
+  									}
+  								}
+  							}*/
 }
-#header-wrapper #main-menu nav#navigation ul {
-  position: absolute;
+#header-wrapper #main-menu nav#navigation ul * {
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
 }
 #header-wrapper #main-menu nav#navigation ul li {
   float: left;
   padding: 0 12px 0 12px;
-  list-style-image: none;
-  list-style-type: none;
-  margin: 0;
+  position: relative;
 }
 #header-wrapper #main-menu nav#navigation ul li a {
   text-decoration: none;
@@ -94,7 +165,10 @@ a:hover {
   display: block;
   font-weight: 600;
 }
-#header-wrapper #main-menu nav#navigation ul li.active {
+#header-wrapper #main-menu nav#navigation ul li:hover {
+  background: #f2f9a2;
+}
+#header-wrapper #main-menu nav#navigation ul > li.active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c2cf34), color-stop(100%, #8e9a1d));
   background-image: -webkit-linear-gradient(#c2cf34, #8e9a1d);
   background-image: -moz-linear-gradient(#c2cf34, #8e9a1d);
@@ -102,35 +176,46 @@ a:hover {
   background-image: linear-gradient(#c2cf34, #8e9a1d);
   margin: 0;
 }
-#header-wrapper #main-menu nav#navigation ul li.active a {
+#header-wrapper #main-menu nav#navigation ul > li.active > a {
   color: white;
 }
-#header-wrapper #main-menu nav#navigation ul li.expanded {
-  list-style-image: none;
-  list-style-type: none;
-  position: relative;
-}
-#header-wrapper #main-menu nav#navigation ul li.expanded ul {
+#header-wrapper #main-menu nav#navigation ul ul {
   position: absolute;
-  background: #c2cd4e;
-  z-index: 99;
+  top: -999em;
+}
+#header-wrapper #main-menu nav#navigation ul li:hover > ul {
+  top: 40px;
   left: 0;
+  z-index: 99;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c2cf34), color-stop(100%, #8e9a1d));
+  background-image: -webkit-linear-gradient(#c2cf34, #8e9a1d);
+  background-image: -moz-linear-gradient(#c2cf34, #8e9a1d);
+  background-image: -o-linear-gradient(#c2cf34, #8e9a1d);
+  background-image: linear-gradient(#c2cf34, #8e9a1d);
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-#header-wrapper #main-menu nav#navigation ul li.expanded ul li {
-  display: inline-block;
-  clear: both;
-  margin: 0;
+#header-wrapper #main-menu nav#navigation ul li:hover > ul li {
+  padding: 0 12px 0 12px;
+  position: relative;
+  width: 180px;
 }
-#header-wrapper #main-menu nav#navigation ul li.expanded ul li {
-  background: none;
+#header-wrapper #main-menu nav#navigation ul li:hover > ul li:hover {
+  background: #f2f9a2;
 }
-#header-wrapper #main-menu nav#navigation ul li.expanded ul li a {
+#header-wrapper #main-menu nav#navigation ul li:hover > ul li:hover.active a {
   color: #222222;
 }
-#header-wrapper #main-menu nav#navigation ul li.expanded ul li.active {
-  background: none;
+#header-wrapper #main-menu nav#navigation ul li:hover > ul li:hover > ul {
+  left: 190px;
+  top: 0;
+  z-index: 99;
 }
-#header-wrapper #main-menu nav#navigation .menu-icon {
+#header-wrapper #main-menu nav#navigation #menu-icon {
   display: none;
 }
 
