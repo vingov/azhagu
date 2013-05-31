@@ -73,13 +73,19 @@
 			    		position: absolute;
 			    		@include background-image(linear-gradient(#c2cf34, #8e9a1d));
 						@include border-bottom-radius(5px);
+						z-index: 99;
 
 			    		li{
 			    			float: none;
 			    			width: 300px;
+
+			    			a{
+			    				padding: 3px 0 3px 0;
+			    				}
 			    			}
 			    		li:hover{
 			    			background: none;
+
 			    			}
 			    		li.active{
 			    			background: none;
@@ -91,10 +97,6 @@
 
 			    		li.active:hover{
 			    			background: none;
-
-			    			a{
-			    				text-decoration: underline;
-			    				}
 			    			}
 			    		ul li:hover > ul{
 			    				position: relative;
@@ -111,6 +113,10 @@
 			    				li:hover > ul{
 			    					left: 0;
 			    					top: 0
+
+			    					li{
+			    						background: none;
+			    						}
 			    					}
 			    			}
 			    		li.expanded{
@@ -119,6 +125,7 @@
 			    				position: relative;
 			    				top: 0;
 			    				background: none;
+			    				display: none !important;
 
 			    				li{
 			    					padding: 0 0 0 25px;
@@ -129,9 +136,15 @@
 			    						}
 			    					}
 			    				li:hover{
+			    					background: none;
+
 			    					ul{
 			    						top: 0;
 			    						left: 0;
+
+			    						li{
+			    							background: none;
+			    							}
 			    						}
 			    					}
 			    				}
