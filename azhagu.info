@@ -10,7 +10,6 @@ stylesheets[all][] = css/responsive.css
 ; JavaScript files
 scripts[] = js/jquery.autofill.js
 scripts[] = js/script.js
-scripts[] = js/initialize.js
 
 
 ; Regions

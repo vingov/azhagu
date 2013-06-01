@@ -65,7 +65,7 @@
   }
   #header-wrapper #main-menu nav#navigation ul.menu li {
     float: none;
-    width: 300px;
+    width: 256px;
   }
   #header-wrapper #main-menu nav#navigation ul.menu li a {
     padding: 3px 0 3px 0;
@@ -102,24 +102,24 @@
     position: relative;
     top: 0;
     background: none;
-    display: none !important;
   }
   #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu li {
     padding: 0 0 0 25px;
+    background: url("../images/icons/icon-arrow.png") 6px 11px no-repeat;
   }
   #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu li ul {
     top: 0;
     left: 0;
   }
   #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu li:hover {
-    background: none;
+    background: url("../images/icons/icon-arrow.png") 6px 11px no-repeat;
   }
   #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu li:hover ul {
     top: 0;
     left: 0;
   }
   #header-wrapper #main-menu nav#navigation ul.menu li.expanded ul.menu li:hover ul li {
-    background: none;
+    background: url("../images/icons/icon-arrow.png") 6px 11px no-repeat;
   }
   #header-wrapper #main-menu nav#navigation #menu-icon {
     display: block;
