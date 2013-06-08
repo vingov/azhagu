@@ -101,7 +101,6 @@ function azhagu_menu_link(array $variables) {
 
 
 function azhagu_page_alter($page) {
-  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
   $viewport = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',

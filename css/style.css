@@ -2,7 +2,7 @@
 /* General Styles */
 body {
   nowhitespace: afterproperty;
-  font: 14px/1.8 'Open Sans', Helvetica, Arial, sans-serif;
+  font: 14px/1.8 "Open Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   background: #e6e7e7;
@@ -161,27 +161,27 @@ a:hover {
   float: left;
   margin-right: 40px;
 }
-#content-wrapper section#content article.node {
+#content-wrapper section#content article.node.node-article {
   background: url("../images/dotted-line.png") bottom left repeat-x;
   padding-bottom: 25px;
   margin-bottom: 25px;
 }
-#content-wrapper section#content article.node header {
+#content-wrapper section#content article.node.node-article header {
   overflow: hidden;
   *zoom: 1;
 }
-#content-wrapper section#content article.node header .date {
+#content-wrapper section#content article.node.node-article header .date {
   display: inline-block;
   background: #e6e7e7;
   border: 1px solid #dadada;
   float: left;
 }
-#content-wrapper section#content article.node header .date span {
+#content-wrapper section#content article.node.node-article header .date span {
   width: 50px;
   display: block;
   text-align: center;
 }
-#content-wrapper section#content article.node header .date .month {
+#content-wrapper section#content article.node.node-article header .date .month {
   background: #c2cd4e;
   color: white;
   text-transform: uppercase;
@@ -190,78 +190,78 @@ a:hover {
   line-height: 1.5em;
   font-weight: 600;
 }
-#content-wrapper section#content article.node header .date .day {
+#content-wrapper section#content article.node.node-article header .date .day {
   font-size: 1.5em;
   line-height: 1.3em;
   font-weight: 300;
 }
-#content-wrapper section#content article.node header .date .year {
+#content-wrapper section#content article.node.node-article header .date .year {
   font-size: .700em;
   line-height: 1.2em;
   font-weight: 300;
 }
-#content-wrapper section#content article.node header .title-meta {
+#content-wrapper section#content article.node.node-article header .title-meta {
   margin-left: 15px;
   float: left;
   display: block;
   width: 89%;
 }
-#content-wrapper section#content article.node header .title-meta h2.title {
+#content-wrapper section#content article.node.node-article header .title-meta h2.title {
   font-size: 1.8em;
   font-weight: 600;
   line-height: 1em;
   background: url("../images/dotted-line.png") bottom left repeat-x;
   padding-bottom: 10px;
 }
-#content-wrapper section#content article.node header .title-meta h2.title a {
+#content-wrapper section#content article.node.node-article header .title-meta h2.title a {
   color: #222222;
   text-decoration: none;
   line-height: 1.2em;
 }
-#content-wrapper section#content article.node header .title-meta .meta ul li {
+#content-wrapper section#content article.node.node-article header .title-meta .meta ul li {
   display: inline-block;
   padding: 0 15px 0 20px;
   color: #888888;
   font-weight: 400;
   font-size: .900em;
 }
-#content-wrapper section#content article.node header .title-meta .meta ul li a {
+#content-wrapper section#content article.node.node-article header .title-meta .meta ul li a {
   text-decoration: none;
   color: #888888;
   display: inline-block;
   padding-right: 5px;
   font-weight: 400;
 }
-#content-wrapper section#content article.node header .title-meta .meta ul li a:hover {
+#content-wrapper section#content article.node.node-article header .title-meta .meta ul li a:hover {
   text-decoration: underline;
 }
-#content-wrapper section#content article.node header .title-meta .meta ul li.author-name {
+#content-wrapper section#content article.node.node-article header .title-meta .meta ul li.author-name {
   background: url("../images/icons/icon-user.png") no-repeat 1px 8px;
 }
-#content-wrapper section#content article.node header .title-meta .meta ul li.tags {
+#content-wrapper section#content article.node.node-article header .title-meta .meta ul li.tags {
   background: url("../images/icons/icon-tags.png") no-repeat 1px 8px;
 }
-#content-wrapper section#content article.node header .title-meta .meta ul li.comments {
+#content-wrapper section#content article.node.node-article header .title-meta .meta ul li.comments {
   background: url("../images/icons/icon-comments.png") no-repeat 1px 8px;
 }
-#content-wrapper section#content article.node .content {
+#content-wrapper section#content article.node.node-article .content {
   margin-top: 25px;
   overflow: hidden;
   *zoom: 1;
 }
-#content-wrapper section#content article.node .content img {
+#content-wrapper section#content article.node.node-article .content img {
   float: left;
   padding: 5px;
   margin: 0.5em 1em 0.5em 0;
   border: 1px solid #d8d8d8;
 }
-#content-wrapper section#content article.node .content p {
+#content-wrapper section#content article.node.node-article .content p {
   padding: 0 0 15px 0;
 }
-#content-wrapper section#content article.node .content footer {
+#content-wrapper section#content article.node.node-article .content footer {
   display: inline-block;
 }
-#content-wrapper section#content article.node .content footer a {
+#content-wrapper section#content article.node.node-article .content footer a {
   color: #222222;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e8e8e8), color-stop(100%, #d7d7d7));
   background-image: -webkit-linear-gradient(#e8e8e8, #d7d7d7);
@@ -289,25 +289,25 @@ a:hover {
   color: #222222;
   text-decoration: none;
 }
-#content-wrapper section#content article.node-page {
+#content-wrapper section#content article.node {
   background: url("../images/dotted-line.png") bottom left repeat-x;
   padding-bottom: 25px;
   margin-bottom: 25px;
 }
-#content-wrapper section#content article.node-page header .title-meta {
+#content-wrapper section#content article.node header .title-meta {
   margin-left: 0px;
   float: left;
   display: block;
   width: 600px;
 }
-#content-wrapper section#content article.node-page header .title-meta h2.title {
+#content-wrapper section#content article.node header .title-meta h2.title {
   font-size: 1.8em;
   font-weight: 600;
   line-height: 1em;
   padding-bottom: 10px;
   background: none;
 }
-#content-wrapper section#content article.node-page .content {
+#content-wrapper section#content article.node .content {
   margin-top: 15px;
 }
 #content-wrapper section#content article:last-child {

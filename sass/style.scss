@@ -161,7 +161,7 @@ a:hover{
 		float: left;
 		margin-right: 40px;
 
-		article.node{
+		article.node.node-article{
 			background: url('../images/dotted-line.png') bottom left repeat-x;
 			padding-bottom: 25px;
 			margin-bottom: 25px;
@@ -298,7 +298,7 @@ a:hover{
 				}
 			}
 
-		article.node-page{
+		article.node{
 			background: url('../images/dotted-line.png') bottom left repeat-x;
 			padding-bottom: 25px;
 			margin-bottom: 25px;
