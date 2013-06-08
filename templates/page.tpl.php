@@ -210,7 +210,9 @@
     </div>
     <div class='footer-region-second'>
       <p>
-        <?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>. <?php print t('Theme by'); ?>  <a href="http://www.drupal-responsive.com" target="_blank">Drupal Responsive</a>
+        <?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a>. 
+        <?php print t('Theme by'); ?>  <a href="http://www.drupal-responsive.com" target="_blank">Drupal Responsive</a>. 
+        <?php print t('Icons by'); ?>  <a href="http://www.glyphicons.com" target="_blank">GLYPHICONS</a>. 
       </p>
     </div>
   </footer><!-- footer-wrapper ends here -->
