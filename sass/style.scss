@@ -84,6 +84,15 @@ a:hover{
 					list-style-type: none;
 					margin: 0;
 					}
+				ul li.expanded{
+					ul li.active{
+						background: none;
+
+						a{
+							color: $default;
+							}
+						}
+					}
 
 				ul li{
 					float: left;
@@ -119,7 +128,7 @@ a:hover{
 						left: 0;
 						z-index: 99;
 						@include background-image(linear-gradient(#c2cf34, #8e9a1d));
-						@include border-bottom-radius(5px); 
+						@include border-radius(5px); 
 
 						li{
 							padding: 0 12px 0 12px;
@@ -127,7 +136,7 @@ a:hover{
 							width: 180px;
 							}
 						li:hover{
-							background: $limongreenlight;
+							background: none;
 							}
 						li:hover.active{
 							a{
@@ -135,7 +144,7 @@ a:hover{
 								}
 							}
 						li:hover > ul{
-							left: 190px;
+							left: 204px;
 							top: 0;
 							z-index: 99;
 							}
@@ -241,13 +250,13 @@ a:hover{
 									}
 								}
 							li.author-name{
-								background: url('../images/icons/icon-user.png') no-repeat 1px 8px;
+								background: url('../images/icons/icon-user.png') no-repeat 1px 6px;
 								}
 							li.tags{
-								background: url('../images/icons/icon-tags.png') no-repeat 1px 8px;
+								background: url('../images/icons/icon-tags.png') no-repeat 1px 6px;
 								}
 							li.comments{
-								background: url('../images/icons/icon-comments.png') no-repeat 1px 8px;
+								background: url('../images/icons/icon-comments.png') no-repeat 1px 6px;
 								}
 							}
 						}
@@ -321,6 +330,23 @@ a:hover{
 				}
 			.content{
 				margin-top: 15px;
+				p{
+					padding: 0 0 15px 0;
+					}
+
+				footer{
+					display: inline-block;
+
+					a{
+						color: $default;
+						@include background-image(linear-gradient(#e8e8e8, #d7d7d7));
+						@include border-radius(3px);
+						padding: 0 10px;
+						text-decoration: none;
+						font-weight: .900em;
+						display: block;
+						}
+					}
 				}
 			}
 
@@ -492,36 +518,21 @@ input[type="password"]{
 
 .pager{
 
-	li.pager-next{
-
-		a
-			{
-			background: url('../images/pagination-right.png') center no-repeat;
-			display: inline-block;
-			text-indent: -9999px;
-			width: 30px;
-			height: 30px;
-			}
-		}
-	li.pager-previous{
-
-		a
-			{
-			background: url('../images/pagination-left.png') center no-repeat;
-			display: inline-block;
-			text-indent: -9999px;
-			width: 30px;
-			height: 30px;
-			}
-		}
-	li.pager-current{
-			background: #d8e360;
-			display: inline-block;
-			width: 30px;
-			height: 30px;		
-		}
-
+	li.pager-first{
+		display: none;
+		visibility: hidden;
 	}
+
+	li.pager-last{
+		display: none;
+		visibility: hidden;
+	}
+
+	li.pager-previous{
+		padding: 0;
+		margin: 0;
+	}
+}
 
 
 /* Table */
@@ -662,3 +673,7 @@ ul{
 		list-style-type: none;
 		}
 	}
+
+.breadcrumb{
+	width: 625px;
+}

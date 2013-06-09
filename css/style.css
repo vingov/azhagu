@@ -82,6 +82,12 @@ a:hover {
   list-style-type: none;
   margin: 0;
 }
+#header-wrapper #main-menu nav#navigation ul li.expanded ul li.active {
+  background: none;
+}
+#header-wrapper #main-menu nav#navigation ul li.expanded ul li.active a {
+  color: #222222;
+}
 #header-wrapper #main-menu nav#navigation ul li {
   float: left;
   padding: 0 12px 0 12px;
@@ -121,12 +127,11 @@ a:hover {
   background-image: -moz-linear-gradient(#c2cf34, #8e9a1d);
   background-image: -o-linear-gradient(#c2cf34, #8e9a1d);
   background-image: linear-gradient(#c2cf34, #8e9a1d);
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
 #header-wrapper #main-menu nav#navigation ul li:hover > ul li {
   padding: 0 12px 0 12px;
@@ -134,13 +139,13 @@ a:hover {
   width: 180px;
 }
 #header-wrapper #main-menu nav#navigation ul li:hover > ul li:hover {
-  background: #f2f9a2;
+  background: none;
 }
 #header-wrapper #main-menu nav#navigation ul li:hover > ul li:hover.active a {
   color: #222222;
 }
 #header-wrapper #main-menu nav#navigation ul li:hover > ul li:hover > ul {
-  left: 190px;
+  left: 204px;
   top: 0;
   z-index: 99;
 }
@@ -236,13 +241,13 @@ a:hover {
   text-decoration: underline;
 }
 #content-wrapper section#content article.node.node-article header .title-meta .meta ul li.author-name {
-  background: url("../images/icons/icon-user.png") no-repeat 1px 8px;
+  background: url("../images/icons/icon-user.png") no-repeat 1px 6px;
 }
 #content-wrapper section#content article.node.node-article header .title-meta .meta ul li.tags {
-  background: url("../images/icons/icon-tags.png") no-repeat 1px 8px;
+  background: url("../images/icons/icon-tags.png") no-repeat 1px 6px;
 }
 #content-wrapper section#content article.node.node-article header .title-meta .meta ul li.comments {
-  background: url("../images/icons/icon-comments.png") no-repeat 1px 8px;
+  background: url("../images/icons/icon-comments.png") no-repeat 1px 6px;
 }
 #content-wrapper section#content article.node.node-article .content {
   margin-top: 25px;
@@ -309,6 +314,29 @@ a:hover {
 }
 #content-wrapper section#content article.node .content {
   margin-top: 15px;
+}
+#content-wrapper section#content article.node .content p {
+  padding: 0 0 15px 0;
+}
+#content-wrapper section#content article.node .content footer {
+  display: inline-block;
+}
+#content-wrapper section#content article.node .content footer a {
+  color: #222222;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e8e8e8), color-stop(100%, #d7d7d7));
+  background-image: -webkit-linear-gradient(#e8e8e8, #d7d7d7);
+  background-image: -moz-linear-gradient(#e8e8e8, #d7d7d7);
+  background-image: -o-linear-gradient(#e8e8e8, #d7d7d7);
+  background-image: linear-gradient(#e8e8e8, #d7d7d7);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  padding: 0 10px;
+  text-decoration: none;
+  font-weight: .900em;
+  display: block;
 }
 #content-wrapper section#content article:last-child {
   background: none;
@@ -469,25 +497,17 @@ input[type="password"] {
 }
 
 /* Pagination */
-.pager li.pager-next a {
-  background: url("../images/pagination-right.png") center no-repeat;
-  display: inline-block;
-  text-indent: -9999px;
-  width: 30px;
-  height: 30px;
+.pager li.pager-first {
+  display: none;
+  visibility: hidden;
 }
-.pager li.pager-previous a {
-  background: url("../images/pagination-left.png") center no-repeat;
-  display: inline-block;
-  text-indent: -9999px;
-  width: 30px;
-  height: 30px;
+.pager li.pager-last {
+  display: none;
+  visibility: hidden;
 }
-.pager li.pager-current {
-  background: #d8e360;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+.pager li.pager-previous {
+  padding: 0;
+  margin: 0;
 }
 
 /* Table */
@@ -624,4 +644,8 @@ table tr td .node-author a:hover {
 ul li.collapsed {
   list-style-image: none;
   list-style-type: none;
+}
+
+.breadcrumb {
+  width: 625px;
 }
