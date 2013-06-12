@@ -85,7 +85,6 @@
   <?php // print $user_picture; ?>
 
   <header>
-    
     <div class="title-meta">
       <?php print render($title_prefix); ?>
       <?php if (!$page): ?>
@@ -104,17 +103,15 @@
       print render($content);
       
     ?>
+
     <footer>
-      <?php 
-if($teaser){
-    print $newreadmore;
-  } 
-?>
-</footer>
+      <?php if ($teaser): ?>
+        <?php print $newreadmore; ?>
+      <?php endif; ?>
+    </footer>
   </div>
 
   <?php print render($content['links']); ?>
-
   <?php print render($content['comments']); ?>
 
 </article>

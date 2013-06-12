@@ -81,9 +81,7 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
   <?php // print $user_picture; ?>
-
   <header>
     
     <div class="date">
@@ -121,16 +119,13 @@
       
     ?>
     <footer>
-      <?php 
-if($teaser){
-    print $newreadmore;
-  } 
-?>
-</footer>
+      <?php if($teaser): ?>
+        <?php print $newreadmore; ?>
+      <?php endif; ?>
+    </footer>
   </div>
 
   <?php print render($content['links']); ?>
-
   <?php print render($content['comments']); ?>
 
 </article>

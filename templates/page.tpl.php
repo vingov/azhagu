@@ -127,7 +127,7 @@
   <?php if (!empty($messages)): print $messages; endif; ?>
 
   <div id="content-wrapper"> <!-- content-wrapper starts here -->
-<div id="breadcrumb" class="breadcrumb"><?php print $breadcrumb; ?></div>
+    <div id="breadcrumb" class="breadcrumb"><?php print $breadcrumb; ?></div>
     <div id="primary">
       <!-- content -->
       <section id="content">
